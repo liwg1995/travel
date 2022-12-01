@@ -1,9 +1,10 @@
 # _*_ coding: utf-8 _*_
 
 from flask_wtf import FlaskForm
-from flask_wtf.file import  FileAllowed
-from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, RadioField,SelectField
+from flask_wtf.file import FileAllowed
+from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField, RadioField, SelectField
 from wtforms.validators import DataRequired, ValidationError
+
 from app.models import Admin
 
 
@@ -47,6 +48,7 @@ class LoginForm(FlaskForm):
         if admin == 0:
             raise ValidationError("账号不存在! ")
 
+
 class PwdForm(FlaskForm):
     old_pwd = PasswordField(
         label="旧密码",
@@ -87,6 +89,7 @@ class PwdForm(FlaskForm):
         if not admin.check_pwd(pwd):
             raise ValidationError("旧密码错误！")
 
+
 class AreaForm(FlaskForm):
     """添加/编辑地区的表单"""
     name = StringField(
@@ -101,10 +104,10 @@ class AreaForm(FlaskForm):
         }
     )
     is_recommended = RadioField(
-        label = '是否推荐',
+        label='是否推荐',
         description="是否推荐",
-        coerce = int,
-        choices=[(0, '否'), (1,'是')], default=0, 
+        coerce=int,
+        choices=[(0, '否'), (1, '是')], default=0,
     )
     introduction = TextAreaField(
         label="简介",
@@ -124,6 +127,7 @@ class AreaForm(FlaskForm):
             "class": "btn btn-primary",
         }
     )
+
 
 class ScenicForm(FlaskForm):
     title = StringField(
@@ -147,14 +151,14 @@ class ScenicForm(FlaskForm):
             "class": "form-control",
             "placeholder": "请输入景区地址！"
         }
-    )    
+    )
     star = SelectField(
         label="星级",
         validators=[
             DataRequired("请选择星级！")
         ],
         coerce=int,
-        choices=[(1, "1星"), (2, "2星"), (3, "3星"), (4, "4星"), (5, "5星")],default=5,
+        choices=[(1, "1星"), (2, "2星"), (3, "3星"), (4, "4星"), (5, "5星")], default=5,
         description="星级",
         render_kw={
             "class": "form-control",
@@ -171,17 +175,17 @@ class ScenicForm(FlaskForm):
     )
 
     is_hot = RadioField(
-        label = '是否热门',
+        label='是否热门',
         description="是否热门",
-        coerce = int,
-        choices=[(0, '否'), (1,'是')], default=0, 
+        coerce=int,
+        choices=[(0, '否'), (1, '是')], default=0,
     )
     is_recommended = RadioField(
-        label = '是否推荐',
+        label='是否推荐',
         description="是否推荐",
-        coerce = int,
-        choices=[(0, '否'), (1,'是')], default=0, 
-    )    
+        coerce=int,
+        choices=[(0, '否'), (1, '是')], default=0,
+    )
     introduction = TextAreaField(
         label="景区简介",
         validators=[
@@ -220,7 +224,8 @@ class ScenicForm(FlaskForm):
         render_kw={
             "class": "btn btn-primary",
         }
-    )        
+    )
+
 
 class TravelsForm(FlaskForm):
     title = StringField(
@@ -244,7 +249,7 @@ class TravelsForm(FlaskForm):
             "class": "form-control",
             "placeholder": "请输入作者！"
         }
-    )    
+    )
     content = TextAreaField(
         label="游记内容",
         validators=[
@@ -271,5 +276,4 @@ class TravelsForm(FlaskForm):
         render_kw={
             "class": "btn btn-primary",
         }
-    )        
-
+    )

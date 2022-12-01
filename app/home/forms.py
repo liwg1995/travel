@@ -1,8 +1,10 @@
 # _*_ coding: utf-8 _*_
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, FileField, TextAreaField
-from wtforms.validators import DataRequired, Email, Regexp, EqualTo, ValidationError
+from wtforms import StringField, PasswordField, SubmitField, TextAreaField
+from wtforms.validators import DataRequired, Email, EqualTo, ValidationError
+
 from app.models import User
+
 
 class RegisterForm(FlaskForm):
     """
@@ -75,7 +77,7 @@ class LoginForm(FlaskForm):
         ],
         description="邮箱",
         render_kw={
-            "type"       : "email",
+            "type": "email",
             "placeholder": "请输入邮箱！",
         }
     )
@@ -86,7 +88,7 @@ class LoginForm(FlaskForm):
         ],
         description="密码",
         render_kw={
-            "type"       : "password",
+            "type": "password",
             "placeholder": "请输入密码！",
         }
     )
@@ -96,6 +98,7 @@ class LoginForm(FlaskForm):
             "class": "btn btn-primary",
         }
     )
+
 
 class SuggetionForm(FlaskForm):
     """
@@ -109,7 +112,7 @@ class SuggetionForm(FlaskForm):
         description="姓名",
         render_kw={
             "placeholder": "请输入姓名！",
-            "class" : "form-control"
+            "class": "form-control"
         }
     )
     email = StringField(
@@ -119,9 +122,9 @@ class SuggetionForm(FlaskForm):
         ],
         description="邮箱",
         render_kw={
-            "type"       : "email",
+            "type": "email",
             "placeholder": "请输入邮箱！",
-            "class" : "form-control"
+            "class": "form-control"
         }
     )
     content = TextAreaField(
@@ -133,7 +136,7 @@ class SuggetionForm(FlaskForm):
         render_kw={
             "class": "form-control",
             "placeholder": "请输入内容！",
-            "rows" : 7
+            "rows": 7
         }
     )
     submit = SubmitField(
@@ -142,7 +145,3 @@ class SuggetionForm(FlaskForm):
             "class": "btn-default btn-cf-submit",
         }
     )
-
-
-
-

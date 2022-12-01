@@ -5,19 +5,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>e起去旅行管理系统</title>
-     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="shortcut icon" href="{{ url_for('static',filename='base/images/logo.png') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='admin/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='fonts/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='admin/dist/css/AdminLTE.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static',filename='admin/dist/css/skins/_all-skins.min.css') }}">
     <style>
-        *{
-            font-family:"Microsoft YaHei";
+        * {
+            font-family: "Microsoft YaHei";
         }
-        .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
-            vertical-align:middle;
-            text-align:center;
+
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            vertical-align: middle;
+            text-align: center;
         }
     </style>
     {% block css %} {% endblock %}
@@ -25,8 +26,9 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
     <header class="main-header">
-       <a href="{{ url_for('admin.index') }}" class="logo">
-            <span class="logo-lg"><img src="{{ url_for('static',filename='base/images/logo.png') }}" style="height:40px;width:40px;">e起去旅行管理系统</span>
+        <a href="{{ url_for('admin.index') }}" class="logo">
+            <span class="logo-lg"><img src="{{ url_for('static',filename='base/images/logo.png') }}"
+                                       style="height:40px;width:40px;">e起去旅行管理系统</span>
         </a>
         <nav class="navbar navbar-static-top">
             <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -54,7 +56,8 @@
                                     <a href="{{ url_for('admin.pwd') }}" class="btn btn-default btn-flat">修改密码</a>
                                 </div>
                                 <div class="pull-right">
-                                    <a href="{{ url_for('admin.logout') }}" class="btn btn-default btn-flat">退出系统</a>
+                                    <a href="{{ url_for('admin.logout') }}"
+                                       class="btn btn-default btn-flat">退出系统</a>
                                 </div>
                             </li>
                         </ul>
@@ -89,9 +92,9 @@
         </section>
     </aside>
     <div class="content-wrapper">
-    <!--内容-->
+        <!--内容-->
         {% block content %} {% endblock %}
-    <!--内容-->
+        <!--内容-->
     </div>
     <footer class="main-footer">
         <strong>版权 &copy; 禹都一只猫 <a href="https://iicats.com">主页</a>.</strong> 所有
@@ -104,6 +107,6 @@
 <script src="{{ url_for('static',filename='admin/plugins/fastclick/fastclick.js') }}"></script>
 <script src="{{ url_for('static',filename='admin/dist/js/app.min.js') }}"></script>
 <script src="{{ url_for('static',filename='admin/dist/js/demo.js') }}"></script>
-        {% block js %} {% endblock %}
+{% block js %} {% endblock %}
 </body>
 </html>

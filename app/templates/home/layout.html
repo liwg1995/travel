@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>e起去旅行</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>e起去旅行</title>
 
-  <link rel="stylesheet" href="{{ url_for('static',filename='base/css/login.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='base/css/login.css') }}" type="text/css">
 </head>
 
 <body>
 <!-- 导航栏开始 -->
 <div id="toolbar">
-  <a href="/" class="router-link-exact-active router-link-active">
-    <img src="{{url_for('static',filename='base/images/logo.png')}}" class="icon">
-    <h1>e起去旅行</h1></a>
-  <ul class="links">
-    <li>
-      <a href="/login/" class="">登录</a></li>
-    <li>
-      <a href="/register/" class="">注册</a></li>
-  </ul>
+    <a href="/" class="router-link-exact-active router-link-active">
+        <img src="{{ url_for('static',filename='base/images/logo.png') }}" class="icon">
+        <h1>e起去旅行</h1></a>
+    <ul class="links">
+        <li>
+            <a href="/login/" class="">登录</a></li>
+        <li>
+            <a href="/register/" class="">注册</a></li>
+    </ul>
 </div>
 <!-- 导航栏结束 -->
 <!--内容-->

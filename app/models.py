@@ -1,12 +1,14 @@
-from . import db
 from datetime import datetime
+
+from . import db
+
 
 # 会员数据模型
 class User(db.Model):
     __tablename__ = "user"
     __table_args__ = {"useexisting": True}
     id = db.Column(db.Integer, primary_key=True)  # 编号
-    username = db.Column(db.String(100)) # 用户名
+    username = db.Column(db.String(100))  # 用户名
     pwd = db.Column(db.String(100))  # 密码
     email = db.Column(db.String(100), unique=True)  # 邮箱
     phone = db.Column(db.String(11), unique=True)  # 手机号
@@ -15,7 +17,7 @@ class User(db.Model):
     addtime = db.Column(db.DateTime, index=True, default=datetime.now)  # 注册时间
     userlogs = db.relationship('Userlog', backref='user')  # 会员日志外键关系关联
     collect = db.relationship('Collect', backref='user')  # 收藏外键关系关联
-    
+
     def __repr__(self):
         return '<User %r>' % self.name
 
@@ -27,6 +29,7 @@ class User(db.Model):
         """
         from werkzeug.security import check_password_hash
         return check_password_hash(self.pwd, pwd)
+
 
 # 管理员
 class Admin(db.Model):
@@ -77,18 +80,20 @@ class Oplog(db.Model):
     def __repr__(self):
         return "<Oplog %r>" % self.id
 
+
 # 地区
 class Area(db.Model):
     __tablename__ = "area"
     id = db.Column(db.Integer, primary_key=True)  # 编号
     name = db.Column(db.String(100), unique=True)  # 标题
     addtime = db.Column(db.DateTime, index=True, default=datetime.now)  # 添加景区时间
-    is_recommended = db.Column(db.Boolean(), default=0) # 是否推荐
-    introduction = db.Column(db.Text)           # 景区简介
+    is_recommended = db.Column(db.Boolean(), default=0)  # 是否推荐
+    introduction = db.Column(db.Text)  # 景区简介
     scenic = db.relationship("Scenic", backref='area')  # 外键关系关联
 
     def __repr__(self):
         return "<Area %r>" % self.name
+
 
 # 会员登录日志
 class Userlog(db.Model):
@@ -109,13 +114,13 @@ class Scenic(db.Model):
     __tablename__ = "scenic"
     id = db.Column(db.Integer, primary_key=True)  # 编号
     title = db.Column(db.String(255), unique=True)  # 标题
-    star  = db.Column(db.Integer)  # 星级
+    star = db.Column(db.Integer)  # 星级
     logo = db.Column(db.String(255), unique=True)  # 封面
-    introduction = db.Column(db.Text)           # 景区简介
-    content = db.Column(db.Text)           # 景区内容描述
-    address = db.Column(db.Text) # 景区地址
-    is_hot  = db.Column(db.Boolean(), default=0) # 是否热门
-    is_recommended = db.Column(db.Boolean(), default=0) # 是否推荐
+    introduction = db.Column(db.Text)  # 景区简介
+    content = db.Column(db.Text)  # 景区内容描述
+    address = db.Column(db.Text)  # 景区地址
+    is_hot = db.Column(db.Boolean(), default=0)  # 是否热门
+    is_recommended = db.Column(db.Boolean(), default=0)  # 是否推荐
 
     # 设置外键
     area_id = db.Column(db.Integer, db.ForeignKey('area.id'))  # 所属标签
@@ -126,13 +131,14 @@ class Scenic(db.Model):
     def __repr__(self):
         return "<Scenic %r>" % self.title
 
+
 # 游记
 class Travels(db.Model):
     __tablename__ = "travels"
     id = db.Column(db.Integer, primary_key=True)  # 编号
-    title = db.Column(db.String(255),unique=True) # 标题
-    author = db.Column(db.String(255))      # 作者
-    content = db.Column(db.Text)           # 游记内容
+    title = db.Column(db.String(255), unique=True)  # 标题
+    author = db.Column(db.String(255))  # 作者
+    content = db.Column(db.Text)  # 游记内容
     scenic_id = db.Column(db.Integer, db.ForeignKey('scenic.id'))  # 所属景区
     addtime = db.Column(db.DateTime, index=True, default=datetime.now)  # 添加时间
 
@@ -150,6 +156,7 @@ class Collect(db.Model):
     def __repr__(self):
         return "<Collect %r>" % self.id
 
+
 # 意见建议
 class Suggestion(db.Model):
     __tablename__ = "suggestion"
@@ -157,7 +164,7 @@ class Suggestion(db.Model):
     id = db.Column(db.Integer, primary_key=True)  # 编号
     name = db.Column(db.String(255))  # 昵称
     email = db.Column(db.String(100))  # 邮箱
-    content = db.Column(db.Text)       # 意见内容
+    content = db.Column(db.Text)  # 意见内容
     addtime = db.Column(db.DateTime, index=True, default=datetime.now)  # 注册时间
 
     def __repr__(self):

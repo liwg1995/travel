@@ -18,8 +18,8 @@ KeyTable is initialised using the `C` option that it adds to DataTables' `dom` o
 
 ```js
 $(document).ready( function () {
-	var table = $('#example').DataTable();
-	new $.fn.dataTable.KeyTable( table );
+    var table = $('#example').DataTable();
+    new $.fn.dataTable.KeyTable( table );
 } );
 ```
 

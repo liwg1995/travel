@@ -1,4 +1,6 @@
-**I apologize to everyone for my slow rate of response and development recently.** This is my final semester and I am very busy. Although I usually work on AdminLTE a few hours a week, there are weeks full of exams and assignments. Thanks for your understanding.
+**I apologize to everyone for my slow rate of response and development recently.** This is my final semester and I am
+very busy. Although I usually work on AdminLTE a few hours a week, there are weeks full of exams and assignments. Thanks
+for your understanding.
 
 Introduction
 ============
@@ -7,18 +9,21 @@ Introduction
 [![npm version](https://img.shields.io/npm/v/admin-lte.svg)](https://www.npmjs.com/package/admin-lte)
 [![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
 
-**AdminLTE** -- is a fully responsive admin template. Based on **[Bootstrap 3](https://github.com/twbs/bootstrap)** framework. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops. Check out the live preview now and see for yourself.
+**AdminLTE** -- is a fully responsive admin template. Based on **[Bootstrap 3](https://github.com/twbs/bootstrap)**
+framework. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large
+desktops. Check out the live preview now and see for yourself.
 
 **Download & Preview on [Almsaeed Studio](https://almsaeedstudio.com)**
 
 Looking for Premium Templates?
 ------------------------------
-**Almsaeed studio just opened a new premium templates page. Hand picked to insure the best quality and the most affordable prices. Visit https://almsaeedstudio.com/premium for more information.**
-
+**Almsaeed studio just opened a new premium templates page. Hand picked to insure the best quality and the most
+affordable prices. Visit https://almsaeedstudio.com/premium for more information.**
 
 !["AdminLTE Presentation"] (https://almsaeedstudio.com/AdminLTE2.png "AdminLTE Presentation")
 
-**AdminLTE** has been carefully coded with clear comments in all of its JS, LESS and HTML files. LESS has been used to increase code customizability.
+**AdminLTE** has been carefully coded with clear comments in all of its JS, LESS and HTML files. LESS has been used to
+increase code customizability.
 
 Installation
 ------------
@@ -34,6 +39,7 @@ Download from Github or [visit Almsaeed Studio](https://almsaeedstudio.com) and 
 
 - Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
 - Clone to your machine
+
 ```
 git clone https://github.com/YOUR_USERNAME/AdminLTE.git
 ```
@@ -63,6 +69,7 @@ updated guide. Information will be added on a weekly basis.
 
 Browser Support
 ---------------
+
 - IE 9+
 - Firefox (latest)
 - Chrome (latest)
@@ -80,18 +87,22 @@ Contribution are always **welcome and recommended**! Here is how:
 
 #### Contribution Requirements:
 
-- When you contribute, you agree to give a non-exclusive license to Almsaeed Studio to use that contribution in any context as we (Almsaeed Studio) see appropriate.
-- If you use content provided by another party, it must be appropriately licensed using an [open source](http://opensource.org/licenses) license.
+- When you contribute, you agree to give a non-exclusive license to Almsaeed Studio to use that contribution in any
+  context as we (Almsaeed Studio) see appropriate.
+- If you use content provided by another party, it must be appropriately licensed using
+  an [open source](http://opensource.org/licenses) license.
 - Contributions are only accepted through Github pull requests.
 - Finally, contributed code must work in all supported browsers (see above for browser support).
 
 License
 -------
-AdminLTE is an open source project by [Almsaeed Studio](https://almsaeedstudio.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). Almsaeed Studio
+AdminLTE is an open source project by [Almsaeed Studio](https://almsaeedstudio.com) that is licensed
+under [MIT](http://opensource.org/licenses/MIT). Almsaeed Studio
 reserves the right to change the license of future releases.
 
 Todo List
 ---------
+
 - ~~Light sidebar colors~~ (Done v2.1.0)
 - ~~Right sidebar~~ (Done v2.1.0)
 - ~~Minified main-sidebar~~ (Done v2.1.0)
@@ -100,20 +111,26 @@ Todo List
 
 Legacy Releases
 ----------------
-AdminLTE 1.x can be easily upgraded to 2.x using [this guide](https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html#upgrade), but if you intend to keep using AdminLTE 1.x, you can download the latest release from the [releases](https://github.com/almasaeed2010/AdminLTE/releases) section above.
+AdminLTE 1.x can be easily upgraded to 2.x
+using [this guide](https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html#upgrade), but if you intend to
+keep using AdminLTE 1.x, you can download the latest release from
+the [releases](https://github.com/almasaeed2010/AdminLTE/releases) section above.
 
 Change log
 ----------
 
-**For the most recent change log, visit the [releases page](https://github.com/almasaeed2010/AdminLTE/releases).** We will add a detailed release notes to each new release. 
+**For the most recent change log, visit the [releases page](https://github.com/almasaeed2010/AdminLTE/releases).** We
+will add a detailed release notes to each new release.
 
 **v2.3.1:**
+
 - Fix sidebar issue #676
 - Fix BootLint warnings and errors
 - Minor bug fixes and code reformat
 - Added Pace page
 
 **v2.3.0:**
+
 - Added social widgets (found in the widgets page)
 - Added profile page
 - Fix issue #430 (requires ```.hold-transition``` to be added to ```<body>```)
@@ -121,6 +138,7 @@ Change log
 - Fix issue #579
 
 **v2.2.1:**
+
 - Bug Fixes
 - Removed many ```!important``` statements in css
 - Activate boxWidget automatically when created after the page has loaded
@@ -133,18 +151,22 @@ Change log
 - Updated Bootstrap to 3.3.5
 
 **v2.2.0:**
+
 - Bug fixes
 - Added support for [Select2](https://select2.github.io/)
 - Updated ChartJS
 
 **v2.1.2:**
+
 - Added explicit BoxWidget activation function issue #450
 - Crushed some bugs
 
 **v2.1.1:**
+
 - Fix version error
 
 **v2.1.0:**
+
 - Update Ion Icons
 - Added right sidebar ```.control-sidebar```
 - Control sidebar has 2 open effects: slide over content and push content
@@ -158,12 +180,15 @@ Change log
 - Added fixed control sidebar layout
 
 **v2.0.5:**
+
 - Fixed issue #288
 
 **v2.0.4:**
+
 - Fixed bower.json to pick up newest release.
 
 **v2.0.3**
+
 - Bug fixes
 - Fixed extra page when printing issue #264
 - Updated documentation and fixed links scrolling issue
@@ -172,9 +197,11 @@ Change log
 - Fixed checkbox out of bounds issue in WYSIHTML5 editor.
 
 **v2.0.2:**
+
 - Solved issue with hidden arrow in select inputs.
 
 **v2.0.1:**
+
 - Updated README.md
 - Fixed versioning issue in CSS, LESS, and JS
 - Updated box-shadow for boxes

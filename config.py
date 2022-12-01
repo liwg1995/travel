@@ -1,5 +1,7 @@
 # -*- coding=utf-8 -*-
 import os
+
+
 class Config:
     SECRET_KEY = 'mrsoft'
     SQLALCHEMY_TRACK_MODIFICATIONS = True
@@ -10,10 +12,12 @@ class Config:
     def init_app(app):
         pass
 
+
 # the config for development
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@127.0.0.1:3306/travel'
     DEBUG = True
+
 
 # define the config
 config = {
